@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coherence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- .page envolve tudo e serve de base para as formas decorativas do fundo -->
+  <div class="page">
+
+    <!-- ========== 1. HEADER ========== -->
+    <header class="header">
+      <a href="#" class="logo">Coherence</a>
+
+      <nav class="menu">
+        <a href="#">О пространстве</a>
+        <a href="#">Мероприятия</a>
+        <a href="#">Тарифы</a>
+        <a href="#">Отзывы</a>
+      </nav>
+    </header>
+
+    <main class="main">
+
+      <!-- ========== 2. HERO ========== -->
+      <section class="hero">
+
+        <h1 class="hero-title">Harmonious</h1>
+
+        <div class="hero-bottom">
+
+          <!-- Bloco com texto e botão -->
+          <div class="hero-info glass">
+            <p>Создаём пространство, где продуктивность сочетается с эстетикой. Наш коворкинг — это баланс комфорта, стиля и вдохновляющего комьюнити, где каждая деталь работает на ваше развитие.</p>
+            <a href="#" class="btn btn-white">Присоединиться ›</a>
+          </div>
+
+          <!-- Bloco com aparência de vídeo -->
+          <div class="hero-video glass">
+            <div class="video-thumb">
+              <span class="play"></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Círculo decorativo com texto curvado -->
+        <div class="hero-badge" aria-hidden="true">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <path id="circulo" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"/>
+            </defs>
+            <text font-size="9.5" fill="currentColor">
+              <textPath href="#circulo" textLength="236" lengthAdjust="spacing">Modern · Minimalist · Modern · Minimalist ·</textPath>
+            </text>
+          </svg>
+        </div>
+
+      </section>
+
+
+      <!-- ========== 3. ESTATÍSTICAS ========== -->
+      <section class="stats">
+
+        <div class="stat">
+          <p class="stat-number">150+</p>
+          <p class="stat-label">Посадочных мест</p>
+        </div>
+
+        <div class="stat">
+          <p class="stat-number">50+</p>
+          <p class="stat-label">Мероприятий в год</p>
+        </div>
+
+        <div class="stat">
+          <p class="stat-number">10+</p>
+          <p class="stat-label">Зон для работы и отдыха</p>
+        </div>
+
+        <div class="stat">
+          <p class="stat-number">24/7</p>
+          <p class="stat-label">Доступ для резидентов</p>
+        </div>
+
+      </section>
+
+
+      <!-- ========== 4. О ПРОЕКТЕ ========== -->
+      <section class="about">
+
+        <h2 class="about-title">О проекте Coherence</h2>
+
+        <div class="about-text">
+          <p><strong>Coherence</strong> — это пространство для работы и общения, созданное для креативных и амбициозных людей. Мы объединяем профессионалов, предпринимателей и цифровых кочевников в комфортной и вдохновляющей среде.</p>
+
+          <p><strong>Coherence</strong> — это не просто коворкинг, а комьюнити единомышленников. Здесь проходят мероприятия, мастермайнды и нетворкинги, помогающие расти. Наши резиденты — более 1000+ специалистов из разных сфер, работающих в комфортных условиях с высокоскоростным интернетом, приватными зонами и стильным интерьером.</p>
+
+          <a href="#" class="btn btn-dark">Подробнее →</a>
+        </div>
+
+      </section>
+
+
+      <!-- ========== 5. CARDS ========== -->
+      <section class="cards">
+
+        <!-- Card grande à esquerda -->
+        <article class="feature-card feature-big">
+          <div class="notch">
+            <span class="tag">Стильный дизайн</span>
+            <h3 class="feature-big-title">Modern<br>Minimalist</h3>
+          </div>
+        </article>
+
+        <!-- Dois cards menores empilhados à direita -->
+        <div class="side-cards">
+
+          <article class="feature-card feature-light">
+            <span class="tag">Комфорт и креативность</span>
+            <p class="feature-text">Чистота, порядок и просторные зоны для продуктивной работы</p>
+            <h3 class="feature-title">Приятная<br>атмосфера</h3>
+          </article>
+
+          <article class="feature-card feature-gray">
+            <span class="tag tag-light">Мебель премиум класса</span>
+            <p class="feature-text feature-text-light">Каждая деталь интерьера продумана, чтобы создавать атмосферу вдохновения и уюта</p>
+            <a href="#" class="round-btn">↗</a>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- ========== 6. EVENTOS ========== -->
+      <section class="events">
+
+        <div class="events-top">
+          <h2 class="events-title">Мероприятия<br>на 2025</h2>
+
+          <div class="events-side">
+            <p>Расписание уникальных и полезных событий в нашем коворкинге, которые вдохновят, объединят и помогут развить ваш творческий потенциал</p>
+            <a href="#" class="btn btn-dark">Смотреть все →</a>
+          </div>
+        </div>
+
+        <!-- ========== 7. TABELA DE EVENTOS ========== -->
+        <div class="event-table">
+
+          <div class="event event-head">
+            <span>Мероприятие</span>
+            <span>Описание</span>
+            <span>Дата</span>
+            <span></span>
+          </div>
+
+          <article class="event">
+            <h3 class="event-name">Вечер сетевого общения</h3>
+            <p class="event-desc">Установите полезные связи и обменяйтесь идеями с единомышленниками в непринуждённой обстановке.</p>
+            <time class="event-date">25/03/25</time>
+            <a href="#" class="event-arrow">↗</a>
+          </article>
+
+          <article class="event">
+            <h3 class="event-name">Семинар по креативному мышлению</h3>
+            <p class="event-desc">Уникальная возможность развить нестандартный подход к решению задач и усилить творческое мышление.</p>
+            <time class="event-date">12/04/25</time>
+            <a href="#" class="event-arrow">↗</a>
+          </article>
+
+          <article class="event">
+            <h3 class="event-name">Воркшоп по удалённому рабочему процессу</h3>
+            <p class="event-desc">Освойте лучшие практики для работы из любой точки мира: от организации пространства до эффективного взаимодействия с командами онлайн.</p>
+            <time class="event-date">02/05/25</time>
+            <a href="#" class="event-arrow">↗</a>
+          </article>
+
+          <article class="event">
+            <h3 class="event-name">Весенний хакатон</h3>
+            <p class="event-desc">Командное соревнование по решению интересных и нестандартных задач, где победители получат не только призы, но и ценные навыки.</p>
+            <time class="event-date">20/05/25</time>
+            <a href="#" class="event-arrow">↗</a>
+          </article>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
