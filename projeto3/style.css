@@ -1,7 +1,3 @@
-/* ==========================================
-   1. BASE
-   ========================================== */
-
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +15,6 @@ a {
   text-decoration: none;
 }
 
-/* .page guarda as formas decorativas do fundo e corta o que sair da tela
-   (é isso que evita a rolagem horizontal) */
 .page {
   position: relative;
   isolation: isolate;
@@ -28,7 +22,6 @@ a {
   background-color: #ffffff;
 }
 
-/* Header e conteúdo principal: mesma largura e mesma margem lateral */
 .header,
 .main {
   width: 100%;
@@ -43,17 +36,13 @@ a {
 }
 
 
-/* ==========================================
-   2. FUNDO DECORATIVO (só CSS)
-   Anéis cinza muito claros nas laterais
-   ========================================== */
 
 .page::before,
 .page::after,
 .events::before {
   content: "";
   position: absolute;
-  z-index: -1;                      /* fica atrás do conteúdo */
+  z-index: -1;                     
   width: 30vw;
   height: 30vw;
   border: clamp(2rem, 6vw, 6rem) solid #f4f4f4;
@@ -80,10 +69,6 @@ a {
 }
 
 
-/* ==========================================
-   3. HEADER
-   ========================================== */
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -109,10 +94,6 @@ a {
 }
 
 
-/* ==========================================
-   4. BOTÕES (usados em várias seções)
-   ========================================== */
-
 .btn {
   display: inline-block;
   font-size: clamp(0.7rem, 0.95vw, 0.9rem);
@@ -132,24 +113,20 @@ a {
 }
 
 
-/* ==========================================
-   5. HERO
-   ========================================== */
-
 .hero {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  aspect-ratio: 1.86 / 1;              /* altura proporcional à largura */
+  aspect-ratio: 1.86 / 1;
   background-color: #b9b9b9;
   border-radius: clamp(16px, 2.6vw, 36px);
   padding: clamp(0.6rem, 1.5vw, 1.5rem);
 }
 
 .hero-title {
-  flex: 1;                             /* ocupa o espaço acima dos blocos */
+  flex: 1; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,7 +144,6 @@ a {
   gap: 1vw;
 }
 
-/* Efeito "vidro": fundo transparente com borda clara */
 .glass {
   background-color: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -205,7 +181,6 @@ a {
   border-radius: clamp(6px, 1vw, 12px);
 }
 
-/* Triângulo de "play" feito só com bordas */
 .play {
   width: 0;
   height: 0;
@@ -214,7 +189,6 @@ a {
   border-left: 0.75rem solid #ffffff;
 }
 
-/* Círculo decorativo no canto inferior direito */
 .hero-badge {
   position: absolute;
   right: 4.5%;
@@ -229,11 +203,6 @@ a {
   width: 100%;
   height: 100%;
 }
-
-
-/* ==========================================
-   6. ESTATÍSTICAS
-   ========================================== */
 
 .stats {
   display: flex;
@@ -260,14 +229,9 @@ a {
   color: #8c8c8c;
 }
 
-
-/* ==========================================
-   7. SEÇÃO "О ПРОЕКТЕ COHERENCE"
-   ========================================== */
-
 .about {
   display: grid;
-  grid-template-columns: 1fr 31%;      /* título à esquerda, texto à direita */
+  grid-template-columns: 1fr 31%;
   gap: 4vw;
   align-items: start;
   padding-bottom: clamp(1.5rem, 4vw, 4rem);
@@ -294,14 +258,9 @@ a {
   margin-top: 0.4em;
 }
 
-
-/* ==========================================
-   8. CARDS
-   ========================================== */
-
 .cards {
   display: grid;
-  grid-template-columns: 2fr 1fr;      /* card grande ~ 65% + coluna à direita */
+  grid-template-columns: 2fr 1fr;
   gap: clamp(0.4rem, 1.3vw, 1.2rem);
 }
 
@@ -311,7 +270,6 @@ a {
   border-radius: clamp(14px, 2.2vw, 30px);
 }
 
-/* Etiqueta com contorno */
 .tag {
   display: inline-block;
   font-size: clamp(0.6rem, 0.9vw, 0.85rem);
@@ -325,15 +283,13 @@ a {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* --- Card grande --- */
 .feature-big {
   aspect-ratio: 381 / 268;
   background-color: #d2d2d2;
 }
 
-/* Recorte branco no canto inferior esquerdo, onde ficam etiqueta e título */
 .notch {
-  --r: clamp(14px, 2vw, 28px);         /* raio da curva */
+  --r: clamp(14px, 2vw, 28px);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -342,7 +298,6 @@ a {
   border-top-right-radius: var(--r);
 }
 
-/* Curva suave onde o recorte encontra a borda de baixo do card */
 .notch::after {
   content: "";
   position: absolute;
@@ -361,10 +316,9 @@ a {
   line-height: 0.95;
 }
 
-/* --- Coluna da direita --- */
 .side-cards {
   display: grid;
-  grid-template-rows: 7fr 10fr;        /* o de cima é mais baixo que o de baixo */
+  grid-template-rows: 7fr 10fr;
   gap: clamp(0.4rem, 1.3vw, 1.2rem);
 }
 
@@ -397,7 +351,6 @@ a {
   line-height: 1.02;
 }
 
-/* Botão circular preto com seta */
 .round-btn {
   position: absolute;
   right: 0;
@@ -414,11 +367,6 @@ a {
   border-radius: 50%;
   font-size: clamp(0.8rem, 1.3vw, 1.2rem);
 }
-
-
-/* ==========================================
-   9. EVENTOS
-   ========================================== */
 
 .events-top {
   display: grid;
@@ -442,12 +390,6 @@ a {
   margin-bottom: 1em;
 }
 
-
-/* ==========================================
-   10. TABELA DE EVENTOS
-   ========================================== */
-
-/* Cada linha tem 4 colunas: nome | descrição | data | seta */
 .event {
   display: grid;
   grid-template-columns: 34% 42% 1fr 2rem;
@@ -456,7 +398,6 @@ a {
   border-bottom: 1px solid #e2e2e2;
 }
 
-/* Linha de títulos da tabela */
 .event-head {
   padding: 0.6rem 0 clamp(0.6rem, 1.4vw, 1.4rem);
   font-size: clamp(0.65rem, 0.9vw, 0.85rem);
@@ -483,7 +424,6 @@ a {
   font-weight: 500;
 }
 
-/* Seta dentro de um círculo pequeno */
 .event-arrow {
   justify-self: end;
   width: clamp(1.4rem, 2.2vw, 2.2rem);
@@ -495,11 +435,6 @@ a {
   border-radius: 50%;
   font-size: clamp(0.65rem, 0.9vw, 0.9rem);
 }
-
-
-/* ==========================================
-   11. TABLET (até 900px)
-   ========================================== */
 
 @media (max-width: 900px) {
 
@@ -519,18 +454,18 @@ a {
   .stats {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);   /* 2 colunas */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem 1rem;
   }
 
   .about,
   .events-top {
-    grid-template-columns: 1fr;              /* título em cima, texto embaixo */
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
   .cards {
-    grid-template-columns: 1fr;              /* cards um abaixo do outro */
+    grid-template-columns: 1fr;
   }
 
   .feature-big {
@@ -547,7 +482,6 @@ a {
     min-height: 200px;
   }
 
-  /* Textos que usavam vw ficam com tamanho mínimo legível */
   .hero-info p,
   .feature-text,
   .about-text p,
@@ -565,15 +499,10 @@ a {
   }
 }
 
-
-/* ==========================================
-   12. CELULAR (até 600px)
-   ========================================== */
-
 @media (max-width: 600px) {
 
   .header {
-    flex-direction: column;                  /* logo em cima, menu embaixo */
+    flex-direction: column;
     align-items: flex-start;
   }
 
@@ -604,7 +533,6 @@ a {
     height: 110px;
   }
 
-  /* O círculo sobe para o canto superior direito para não cobrir os blocos */
   .hero-badge {
     top: 1rem;
     right: 1rem;
@@ -633,7 +561,6 @@ a {
     font-size: 1.6rem;
   }
 
-  /* Tabela: cada evento vira um bloco vertical */
   .event-head {
     display: none;
   }
